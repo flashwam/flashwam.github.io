@@ -1,0 +1,1 @@
+User-agent: * Disallow: Sitemap: https://flashwam.github.io/sitemap.xml
