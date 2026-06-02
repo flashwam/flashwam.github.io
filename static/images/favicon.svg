@@ -1,37 +1,12 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<circle style="fill:#FFDA44;" cx="256" cy="256" r="256"/>
-<path style="fill:#338AF3;" d="M0,256C0,114.616,114.616,0,256,0s256,114.616,256,256"/>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="320" height="512" role="img" aria-label="Flash-WAM lightning bolt logo">
+  <defs>
+    <linearGradient id="flashBoltGrad" x1="80" y1="40" x2="240" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0.30" stop-color="#2563EB"></stop>
+      <stop offset="0.70" stop-color="#F97316"></stop>
+    </linearGradient>
+  </defs>
+  
+  <path d="M 180 30 L 55 282 L 165 282 L 140 484 L 265 230 L 155 230 Z" fill="#E2E8F0" transform="translate(-8 8)"></path>
+  
+  <path d="M 180 30 L 55 282 L 165 282 L 140 484 L 265 230 L 155 230 Z" fill="url(#flashBoltGrad)"></path>
 </svg>

@@ -3,26 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Flash-WAM: Modality-Aware Distillation for World Action Models. A step-distillation framework that enables real-time inference for joint video-action diffusion models with a 23x speedup.">
+  <meta name="keywords" content="Flash-WAM, World Action Models, Step Distillation, Consistency Distillation, Robotics, Diffusion Models">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Flash-WAM: Modality-Aware Distillation for World Action Models</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -42,45 +28,6 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
 
 
 <section class="hero">
@@ -88,84 +35,65 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">
+            <img src="./figures/flash-icon.svg" alt="" class="flash-icon"><span class="title-flash">Flash</span>-<span class="title-wam">WAM</span>
+            <span class="title-subtitle">Modality-Aware Distillation for World Action Models</span>
+          </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              Arman Akbari<sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              Ci Zhang<sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              Arash Akbari<sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              Lin Zhao<sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              Yixiao Chen<sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              Weiwei Chen<sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              Xuan Zhang<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Geng Yuan<sup>2</sup>,
+            </span>
+            <span class="author-block">
+              Yanzhi Wang<sup>1,3</sup>
             </span>
           </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+          <div class="is-size-5 publication-authors affiliation-block">
+            <span class="author-block"><sup>1</sup>Northeastern University,</span>
+            <span class="author-block"><sup>2</sup>University of Georgia,</span>
+            <span class="author-block"><sup>3</sup>EmbodyX Inc.</span>
           </div>
+
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
+                <a href="https://arxiv.org/abs/2507.00780" class="pub-link">
+                  <span class="pub-link-icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
+                <a href="https://github.com/Arman-Akbari/FlashWAM" class="pub-link">
+                  <span class="pub-link-icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
                 </a>
               </span>
-              <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
+                <a href="https://huggingface.co/Arman-Akbari/FlashWAM" class="pub-link">
+                  <span class="pub-link-icon">&#129303;</span>
+                  <span>Models</span>
+                </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -175,280 +103,372 @@
   </div>
 </section>
 
+<!-- Teaser Figure -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+      <img src="./static/images/figures/teaser.png"
+           alt="Flash-WAM per-chunk inference latency comparison"
+           style="width: 85%; max-width: 720px; border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); display: block; margin: 0 auto;">
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+        <strong>Flash-WAM</strong> compresses 25 video and 50 action denoising steps to just 1 each,
+        achieving a <strong>23&times; speedup</strong> and enabling real-time robot control on a single NVIDIA L40S GPU.
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+<!-- Abstract -->
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            World-action models (WAMs) jointly generate future video and robot actions via iterative diffusion,
+            but require tens of denoising steps per chunk, precluding real-time control.
+            Off-the-shelf step distillation fails here because the video and action streams use
+            asymmetric noise schedules, causing the gradient signal for actions to vanish under
+            standard consistency distillation.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We introduce <strong>Flash-WAM</strong>, a modality-aware distillation framework that
+            assigns each stream its own consistency function matched to its noise regime.
+            Instantiated on LingBot-VA, Flash-WAM compresses inference from 25 video and 50 action
+            steps down to 1 each &mdash; a <strong>23&times; speedup</strong> (8.1s &rarr; 348 ms) enabling
+            real-time inference on a single NVIDIA L40S. Flash-WAM achieves <strong>85.5%</strong> on
+            RoboTwin 2.0 and <strong>95.7%</strong> on LIBERO, while naive distillation drops to 24%.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
 
+<!-- Method Overview -->
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            <strong>Left:</strong> Naive consistency distillation fails on joint video-action models because
+            the two modalities operate in structurally different noise regimes. The gradient signal for actions
+            vanishes quadratically under standard LCM parametrization.
+            <strong>Middle:</strong> Flash-WAM assigns each modality its own consistency function &mdash;
+            a variance-preserving (Karras) parametrization for the high-noise video stream and a
+            linear-gradient-scaling parametrization for the low-noise action stream.
+            <strong>Right:</strong> The distilled student autoregressively generates video and actions
+            with a single denoising step per modality.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
         </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
+        <img src="./static/images/figures/overview.png"
+             alt="Flash-WAM method overview"
+             style="width: 100%; border-radius: 10px;">
       </div>
     </div>
-    <!--/ Matting. -->
+  </div>
+</section>
 
-    <!-- Animation. -->
+
+<!-- Results -->
+<section class="section" style="background-color: #fafafa;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+      </div>
+    </div>
+
+    <!-- RoboTwin Table -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h3 class="title is-4">RoboTwin 2.0</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            Success rates on RoboTwin 2.0 simulation (Clean and Randomized splits, 50 tasks)
+            and speedup over the LingBot-VA teacher.
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
+        <div class="table-container">
+          <table class="table is-hoverable is-fullwidth results-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>N<sup>v</sup></th>
+                <th>N<sup>a</sup></th>
+                <th>Clean</th>
+                <th>Rand.</th>
+                <th>Average</th>
+                <th>Speedup</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-baseline">
+                <td>&pi;<sub>0</sub></td><td>&ndash;</td><td>&ndash;</td>
+                <td>65.92</td><td>58.40</td><td>62.2</td><td>&ndash;</td>
+              </tr>
+              <tr class="is-baseline">
+                <td>&pi;<sub>0.5</sub></td><td>&ndash;</td><td>&ndash;</td>
+                <td>82.74</td><td>76.76</td><td>79.8</td><td>&ndash;</td>
+              </tr>
+              <tr class="is-baseline">
+                <td>X-VLA</td><td>&ndash;</td><td>&ndash;</td>
+                <td>72.9</td><td>72.8</td><td>72.8</td><td>&ndash;</td>
+              </tr>
+              <tr class="is-baseline">
+                <td>Motus</td><td>&ndash;</td><td>&ndash;</td>
+                <td>88.66</td><td>87.02</td><td>87.8</td><td>&ndash;</td>
+              </tr>
+              <tr class="is-teacher">
+                <td>LingBot-VA*</td><td>25</td><td>50</td>
+                <td>91.64</td><td>90.86</td><td>91.25</td><td>1.0&times;</td>
+              </tr>
+              <tr class="table-divider"><td colspan="7"></td></tr>
+              <tr>
+                <td>LingBot-VA + DMD2</td><td>1</td><td>2</td>
+                <td>85.08</td><td>72.36</td><td>78.74</td><td rowspan="4" style="vertical-align: middle;">19.0&times;</td>
+              </tr>
+              <tr>
+                <td>LingBot-VA + Video-only LCM</td><td>1</td><td>2</td>
+                <td>80.66</td><td>76.92</td><td>78.79</td>
+              </tr>
+              <tr>
+                <td>LingBot-VA + Naive Joint LCM</td><td>1</td><td>2</td>
+                <td>25.88</td><td>22.07</td><td>23.97</td>
+              </tr>
+              <tr class="is-ours">
+                <td><strong>Ours</strong></td><td>1</td><td>2</td>
+                <td><strong>88.42</strong></td><td><strong>82.66</strong></td><td><strong>85.54</strong></td>
+              </tr>
+              <tr class="table-divider"><td colspan="7"></td></tr>
+              <tr>
+                <td>LingBot-VA + DMD2</td><td>1</td><td>1</td>
+                <td>52.66</td><td>48.46</td><td>50.56</td><td rowspan="4" style="vertical-align: middle;">23.3&times;</td>
+              </tr>
+              <tr>
+                <td>LingBot-VA + Video-only LCM</td><td>1</td><td>1</td>
+                <td>77.90</td><td>69.46</td><td>73.68</td>
+              </tr>
+              <tr>
+                <td>LingBot-VA + Naive Joint LCM</td><td>1</td><td>1</td>
+                <td>39.68</td><td>32.96</td><td>36.32</td>
+              </tr>
+              <tr class="is-ours">
+                <td><strong>Ours</strong></td><td>1</td><td>1</td>
+                <td><strong>82.56</strong></td><td><strong>80.26</strong></td><td><strong>81.41</strong></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
       </div>
     </div>
-    <!--/ Animation. -->
 
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <!-- Real-World Experiments -->
+    <div class="columns is-centered" style="margin-top: 2.5rem;">
       <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
+        <h3 class="title is-4">Real-World Experiments</h3>
         <div class="content has-text-justified">
           <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
+            We evaluate Flash-WAM on a <strong>Unitree G1</strong> humanoid robot equipped with
+            <strong>Dex1-1 grippers</strong> across three manipulation tasks. Each task is tested
+            10 times per configuration. The baseline uses the original LingBot-VA setting with
+            3 video and 10 action denoising steps. Reducing steps without distillation causes
+            significant degradation, while Flash-WAM recovers most of the baseline performance
+            at drastically reduced inference cost.
           </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+        </div>
+        <div class="table-container">
+          <table class="table is-hoverable is-fullwidth results-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>N<sup>v</sup></th>
+                <th>N<sup>a</sup></th>
+                <th>Open Lid &amp; Place Potato</th>
+                <th>Pick Red Bottle</th>
+                <th>Place on Cross</th>
+                <th>Average</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-teacher">
+                <td>LingBot-VA (baseline)</td><td>3</td><td>10</td>
+                <td>50%</td><td>70%</td><td>80%</td><td>66.7%</td>
+              </tr>
+              <tr class="table-divider"><td colspan="7"></td></tr>
+              <tr>
+                <td>LingBot-VA (no distillation)</td><td>1</td><td>2</td>
+                <td>30%</td><td>30%</td><td>60%</td><td>40.0%</td>
+              </tr>
+              <tr class="is-ours">
+                <td><strong>Flash-WAM</strong></td><td>1</td><td>2</td>
+                <td><strong>50%</strong></td><td><strong>60%</strong></td><td><strong>70%</strong></td><td><strong>60.0%</strong></td>
+              </tr>
+              <tr class="table-divider"><td colspan="7"></td></tr>
+              <tr>
+                <td>LingBot-VA (no distillation)</td><td>1</td><td>1</td>
+                <td>10%</td><td>30%</td><td>30%</td><td>23.3%</td>
+              </tr>
+              <tr class="is-ours">
+                <td><strong>Flash-WAM</strong></td><td>1</td><td>1</td>
+                <td><strong>40%</strong></td><td><strong>50%</strong></td><td><strong>60%</strong></td><td><strong>50.0%</strong></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
 
 
+<!-- Real-World Demos -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Real-World Demos</h2>
+        <div class="content has-text-justified">
+          <p>
+            End-to-end rollouts on the Unitree G1. The baseline (3v/10a) succeeds but is too slow
+            for real-time control. Reducing steps to 1v/1a without distillation causes failure.
+            Flash-WAM (1v/1a) recovers successful behavior at real-time speed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LingBot-VA baseline 3v/10a -->
+    <div class="demo-group">
+      <h4 class="has-text-centered demo-group-label">
+        <span class="demo-tag demo-tag-baseline">LingBot-VA (3v/10a)</span>
+      </h4>
+      <div class="columns is-centered is-multiline">
+        <div class="column is-one-third">
+          <div class="results-carousel"><div class="item">
+            <video poster="" autoplay controls muted loop playsinline width="100%">
+              <source src="./DEMO/3v:10a/IMG_2117_3.mp4" type="video/mp4">
+              </video>
+          </div></div>
+        </div>
+        <div class="column is-one-third">
+          <div class="results-carousel"><div class="item">
+            <video poster="" autoplay controls muted loop playsinline width="100%">
+              <source src="./DEMO/3v:10a/IMG_2121.mp4" type="video/mp4">
+              </video>
+          </div></div>
+        </div>
+        <div class="column is-one-third">
+          <div class="results-carousel"><div class="item">
+            <video poster="" autoplay controls muted loop playsinline width="100%">
+              <source src="./DEMO/3v:10a/IMG_2132.mp4" type="video/mp4">
+              </video>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- No distillation 1v/1a (failures) -->
+    <div class="demo-group">
+      <h4 class="has-text-centered demo-group-label">
+        <span class="demo-tag demo-tag-fail">No Distillation (1v/1a)</span>
+      </h4>
+      <div class="columns is-centered is-multiline">
+        <div class="column is-one-third">
+          <div class="results-carousel"><div class="item">
+            <video poster="" autoplay controls muted loop playsinline width="100%">
+              <source src="./DEMO/1v:1a/fail/IMG_2244.mp4" type="video/mp4">
+              </video>
+          </div></div>
+        </div>
+        <div class="column is-one-third">
+          <div class="results-carousel"><div class="item">
+            <video poster="" autoplay controls muted loop playsinline width="100%">
+              <source src="./DEMO/1v:1a/fail/IMG_2246.mp4" type="video/mp4">
+              </video>
+          </div></div>
+        </div>
+        <div class="column is-one-third">
+          <div class="results-carousel"><div class="item">
+            <video poster="" autoplay controls muted loop playsinline width="100%">
+              <source src="./DEMO/1v:1a/fail/IMG_2252.mp4" type="video/mp4">
+              </video>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flash-WAM 1v/1a (successes) -->
+    <div class="demo-group">
+      <h4 class="has-text-centered demo-group-label">
+        <span class="demo-tag demo-tag-ours">Flash-WAM (1v/1a)</span>
+      </h4>
+      <div class="columns is-centered is-multiline">
+        <div class="column is-one-third">
+          <div class="results-carousel"><div class="item">
+            <video poster="" autoplay controls muted loop playsinline width="100%">
+              <source src="./DEMO/Flash 1v:1a/succ/IMG_2212.mp4" type="video/mp4">
+              </video>
+          </div></div>
+        </div>
+        <div class="column is-one-third">
+          <div class="results-carousel"><div class="item">
+            <video poster="" autoplay controls muted loop playsinline width="100%">
+              <source src="./DEMO/Flash 1v:1a/succ/IMG_2218.mp4" type="video/mp4">
+              </video>
+          </div></div>
+        </div>
+        <div class="column is-one-third">
+          <div class="results-carousel"><div class="item">
+            <video poster="" autoplay controls muted loop playsinline width="100%">
+              <source src="./DEMO/Flash 1v:1a/succ/IMG_2220.mp4" type="video/mp4">
+              </video>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Qualitative Comparison -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualitative Comparison</h2>
+        <div class="content has-text-justified">
+          <p>
+            Video predictions from an open-loop autoregressive rollout on RoboTwin "pick diverse bottles".
+            Both off-the-shelf distillation baselines (naive joint LCM and DMD2) visibly degrade:
+            objects disappear or become blurred. Flash-WAM preserves scene structure and object identity
+            throughout the rollout.
+          </p>
+        </div>
+        <img src="./static/images/figures/qualitative.png"
+             alt="Qualitative comparison on RoboTwin pick diverse bottles task"
+             style="width: 100%; border-radius: 10px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BibTeX -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{akbari2025flashwam,
+  title     = {Flash-WAM: Modality-Aware Distillation for World Action Models},
+  author    = {Akbari, Arman and Zhang, Ci and Akbari, Arash and Zhao, Lin and Chen, Yixiao and Chen, Weiwei and Zhang, Xuan and Yuan, Geng and Wang, Yanzhi},
+  journal   = {arXiv preprint arXiv:2507.00780},
+  year      = {2025},
 }</code></pre>
   </div>
 </section>
@@ -458,10 +478,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="./FlashWAM_ArXiv.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/Arman-Akbari/FlashWAM">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -469,16 +489,11 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            This website template is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
+            licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>

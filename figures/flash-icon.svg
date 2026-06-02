@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="320" height="512" role="img" aria-label="Flash-WAM lightning bolt logo">
+  <defs>
+    <linearGradient id="flashBoltGrad" x1="80" y1="40" x2="240" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0.30" stop-color="#2563EB"></stop>
+      <stop offset="0.70" stop-color="#F97316"></stop>
+    </linearGradient>
+  </defs>
+  
+  <path d="M 180 30 L 55 282 L 165 282 L 140 484 L 265 230 L 155 230 Z" fill="#E2E8F0" transform="translate(-8 8)"></path>
+  
+  <path d="M 180 30 L 55 282 L 165 282 L 140 484 L 265 230 L 155 230 Z" fill="url(#flashBoltGrad)"></path>
+</svg>
